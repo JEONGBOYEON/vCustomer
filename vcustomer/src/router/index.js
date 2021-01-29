@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Customers from '@/components/Customers.vue'
+import CustomerDetails from '@/components/CustomerDetails.vue'
 import About from '@/components/About.vue'
 import Nav from '@/components/Nav.vue'
 import Add from '@/components/Add.vue'
@@ -15,6 +16,12 @@ export default new Router({
       path: '/',
       name: 'Customers',
       component: Customers,
+      props:true
+    },
+    {
+      path: '/customer/:id',
+      name: 'CustomerDetails',
+      component: CustomerDetails,
       props:true
     },
     {

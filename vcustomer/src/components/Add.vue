@@ -49,7 +49,7 @@
 
 <script>
 export default {
-  name: 'Add',
+  name: 'add',
   data () {
     return {
       customer:{}
@@ -74,9 +74,15 @@ export default {
           state: this.customer.state
         }
         
-        console.log(newCustomer);
-        this.$router.push({name:'Customers', params:{customer: newCustomer}});
-        
+        // console.log(newCustomer);
+        this.$router.push({
+          name:'Customers', 
+          params:{
+            customer: newCustomer,
+            alert: "Customer added"
+          }
+        });
+
         // this.$http.post('http://slimapp/api/customer/add', newCustomer)
         //   .then(function(response){
         //     this.$router.push({path:'/'});
